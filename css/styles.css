@@ -1,0 +1,114 @@
+/* Definición de variables CSS personalizadas */
+:root {
+    --big: 4.8rem;
+    /* Tamaño de fuente grande */
+    --md: 3.4rem;
+    /* Tamaño de fuente mediano */
+    --std: 1.4rem;
+    /* Tamaño de fuente estándar */
+    --gray: #666666;
+    /* Color gris */
+    --lightgrey: #f7f9fa;
+    /* Color gris claro */
+    --dark: #203B6A;
+    /* Color azul oscuro */
+    --black: #333;
+    /* Color negro */
+    --white: white;
+    /* Color blanco */
+    --bg-dark: #4685cd;
+    /* Color de fondo azul oscuro */
+}
+
+/* Estilo de caja para todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Configuración del tamaño de fuente base para todo el documento */
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+/* Configuración básica del cuerpo del documento */
+body {
+    margin: 0;
+}
+
+/* Estilo para los enlaces */
+a {
+    text-decoration: none;
+    /* Sin subrayado en enlaces */
+    display: inline;
+    /* Mostrar enlaces en línea */
+    color: black;
+    /* Color de texto negro para enlaces */
+}
+
+/* Estilo para el encabezado (header) */
+.header {
+    display: flex;
+    max-width: 120rem;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 10.7rem;
+    background: var(--white);
+}
+
+.header div,
+.header nav {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin: 0.5rem;
+    height: 10rem;
+    margin-right: 0.5rem;
+}
+
+.nav__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+.nav__menu a {
+    font-size: 1.6rem;
+    padding: 0 1.7rem;
+    color: red;
+}
+
+header .header__icons__container {
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+header .header__icons__container .icons {
+    width: 15rem;
+    height: center;
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1.5rem;
+}
+
+header .icons span {
+    color: red;
+}
