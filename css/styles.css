@@ -18,6 +18,8 @@
     /* Color blanco */
     --bg-dark: #4685cd;
     /* Color de fondo azul oscuro */
+    --transition-time: 15s; /* Personaliza el tiempo de transición aquí */
+    --max-width: 600px; 
 }
 
 /* Estilo de caja para todos los elementos */
@@ -34,6 +36,8 @@ html {
 /* Configuración básica del cuerpo del documento */
 body {
     margin: 0;
+    padding: 0;
+    font-size: var(--std);
 }
 
 /* Estilo para los enlaces */
@@ -111,4 +115,96 @@ header .header__icons__container .icons {
 
 header .icons span {
     color: red;
+}
+
+.main {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente en el eje X */
+    align-items: center; /* Centra verticalmente en el eje Y */
+}
+
+.slider-container {
+    position: relative;
+    max-width: var(--max-width);
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    animation: slide var(--transition-time) infinite;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--dark);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: var(--bg-dark);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    45% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    95% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end; 
+    margin: 10px 0;
+}
+
+.footer_copyright {
+    font-size: 1rem; /* Tamaño de fuente pequeño */
+    text-align: center; /* Centrar el texto horizontalmente en el footer */
+    color: #666; /* Color de texto gris, puedes personalizar el color */
+    margin: 2rem 0; /* Márgenes superior e inferior */
 }
