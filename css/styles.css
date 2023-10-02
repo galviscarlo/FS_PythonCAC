@@ -165,35 +165,37 @@ header .icons span {
     right: 20px;
 }
 
+/* Modifica la animación del slider */
 @keyframes slide {
     0% {
         transform: translateX(0);
     }
-    20% {
+    10% {
         transform: translateX(0);
     }
     25% {
         transform: translateX(-100%);
     }
-    45% {
+    35% {
         transform: translateX(-100%);
     }
     50% {
         transform: translateX(-200%);
     }
-    70% {
+    60% {
         transform: translateX(-200%);
     }
     75% {
         transform: translateX(-300%);
     }
-    95% {
+    85% {
         transform: translateX(-300%);
     }
     100% {
         transform: translateX(-400%);
     }
 }
+
 
 footer {
     display: flex;

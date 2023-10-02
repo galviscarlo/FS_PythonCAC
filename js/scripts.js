@@ -17,3 +17,14 @@ prevBtn.addEventListener('click', () => {
 function updateSlider() {
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
+
+// Agregar una función para reiniciar el slider al final
+function restartSlider() {
+    setTimeout(() => {
+        currentIndex = 0;
+        updateSlider();
+    }, 6000);
+}
+
+// Llamar a la función para reiniciar el slider
+restartSlider();
