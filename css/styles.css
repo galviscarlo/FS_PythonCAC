@@ -210,3 +210,28 @@ footer {
     color: #666; /* Color de texto gris, puedes personalizar el color */
     margin: 2rem 0; /* Márgenes superior e inferior */
 }
+
+/*Configuración del formulario de contacto*/ 
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 10px;
+    padding: 10px;
+    justify-content: center;
+
+  }
+  
+  .grid-container h1{
+    align-items: center;
+    color: crimson;
+  }
+  
+  .grid-item{
+    grid-column: auto;
+    margin-bottom: 10px;
+  }
+
+  .grid-item label, input, textarea{
+    width: 100%;
+  }

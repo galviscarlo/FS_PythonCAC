@@ -10,21 +10,17 @@
     />
     <meta name="autor" content="Carlos M. Galvis / Colaboradores: Patricia Avendaño - Maria Roble - Carlos Silva" />
     <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/font/flaticon.css" />
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
-    <link
-      rel="shortcut icon"
-      href="/assets/images/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/font/flaticon.css" />
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
     <title> CONTACTO ListoEnCinco</title>
   </head>
   <body>
     <header class="header">
       <div>
         <a class="logo">
-          <img src="/assets/images/Logo_ListoEnCinco_t.png" alt="logo" />
+          <img src="./assets/images/Logo_ListoEnCinco_t.png" alt="logo" />
         </a>
       </div>
       <div>
@@ -48,7 +44,34 @@
       </div>
     </header>
     <!-- seccion con info de contacto-->
-    <main class="main">
+    <main class="main">     
+      
+      <div class="grid-container">   
+        
+        <h1>Dejanos tu comentario</h1>
+        
+        <form action="./index.html">
+          <div class="grid-item">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Pedro">
+          </div>
+          <div class="grid-item">
+            <label for="nombre">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required placeholder="Perez">
+          </div>
+          <div class="grid-item">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="pedro.perez@tumail.com">
+          </div>
+          <div class="grid-item">
+            <label for="comentario">Comentario:</label>
+            <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+          </div>
+          <div class="grid-item">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
       
     </main>
     <!-- footer informacion sobre copyright, derechos de autor, etc-->
