@@ -1,0 +1,277 @@
+/* Definición de variables CSS personalizadas */
+:root {
+    --big: 4.8rem;
+    /* Tamaño de fuente grande */
+    --md: 3.4rem;
+    /* Tamaño de fuente mediano */
+    --std: 1.4rem;
+    /* Tamaño de fuente estándar */
+    --gray: #666666;
+    /* Color gris */
+    --lightgrey: #f7f9fa;
+    /* Color gris claro */
+    --dark: #203B6A;
+    /* Color azul oscuro */
+    --black: #333;
+    /* Color negro */
+    --white: white;
+    /* Color blanco */
+    --bg-dark: #4685cd;
+    /* Color de fondo azul oscuro */
+    --transition-time: 15s; /* Personaliza el tiempo de transición aquí */
+    --max-width: 600px; 
+}
+
+/* Estilo de caja para todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Configuración del tamaño de fuente base para todo el documento */
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+/* Configuración básica del cuerpo del documento */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: var(--std);
+}
+
+/* Estilo para los enlaces */
+a {
+    text-decoration: none;
+    /* Sin subrayado en enlaces */
+    display: inline;
+    /* Mostrar enlaces en línea */
+    color: black;
+    /* Color de texto negro para enlaces */
+}
+
+/* Estilo para el encabezado (header) */
+.header {
+    display: flex;
+    max-width: 120rem;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 10.7rem;
+    background: var(--white);
+}
+
+.header div,
+.header nav {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin: 0.5rem;
+    height: 10rem;
+    margin-right: 0.5rem;
+}
+
+.nav__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+.nav__menu a {
+    font-size: 1.6rem;
+    padding: 0 1.7rem;
+    color: red;
+}
+
+header .header__icons__container {
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+header .header__icons__container .icons {
+    width: 15rem;
+    height: center;
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1.5rem;
+}
+
+header .icons span {
+    color: red;
+}
+
+.main {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente en el eje X */
+    align-items: center; /* Centra verticalmente en el eje Y */
+}
+
+.slider-container {
+    position: relative;
+    max-width: var(--max-width);
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    animation: slide var(--transition-time) infinite;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--dark);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: var(--bg-dark);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.recetasvarias img {
+    width: 55%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 2%;
+    border-color: red;
+    border-width: 3px;
+    border-style: dotted;
+    display: block;
+    margin: 0 auto;
+}
+
+.contenedor {
+    width: 100%;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 2%;
+    }
+
+.recetario .contenedor {
+    display: grid;
+    }
+
+@media(min-width:520px) {
+        .recetario .contenedor {
+            grid-template-columns: repeat(2,50%);
+        }
+    }  
+
+@media(min-width:780px) {
+    .recetario .contenedor {
+        grid-template-columns: repeat(3,33.3%);
+    }
+}
+
+/* Modifica la animación del slider */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    35% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    85% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end; 
+    margin: 10px 0;
+}
+
+.footer_copyright {
+    font-size: 1rem; /* Tamaño de fuente pequeño */
+    text-align: center; /* Centrar el texto horizontalmente en el footer */
+    color: #666; /* Color de texto gris, puedes personalizar el color */
+    margin: 2rem 0; /* Márgenes superior e inferior */
+}
+
+/*Configuración del formulario de contacto*/ 
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 10px;
+    padding: 10px;
+    justify-content: center;
+
+  }
+  
+  .grid-container h1{
+    align-items: center;
+    color: crimson;
+  }
+  
+  .grid-item{
+    grid-column: auto;
+    margin-bottom: 10px;
+  }
+
+  .grid-item label, input, textarea{
+    width: 100%;
+  }
