@@ -165,6 +165,46 @@ header .icons span {
     right: 20px;
 }
 
+.recetasvarias img {
+    width: 55%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 2%;
+    border-color: red;
+    border-width: 3px;
+    border-style: dotted;
+    display: block;
+    margin: 0 auto;
+}
+
+.contenedor {
+    width: 100%;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 2%;
+    }
+
+.recetario .contenedor {
+    display: grid;
+    }
+
+@media(min-width:520px) {
+        .recetario .contenedor {
+            grid-template-columns: repeat(2,50%);
+        }
+    }  
+
+@media(min-width:780px) {
+    .recetario .contenedor {
+        grid-template-columns: repeat(3,33.3%);
+    }
+}
+
 /* Modifica la animación del slider */
 @keyframes slide {
     0% {
