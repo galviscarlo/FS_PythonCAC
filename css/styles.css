@@ -1,30 +1,13 @@
-/* Definición de variables CSS personalizadas */
-:root {
-    --big: 4.8rem;
-    /* Tamaño de fuente grande */
-    --md: 3.4rem;
-    /* Tamaño de fuente mediano */
-    --std: 1.4rem;
-    /* Tamaño de fuente estándar */
-    --gray: #666666;
-    /* Color gris */
-    --lightgrey: #f7f9fa;
-    /* Color gris claro */
-    --dark: #203B6A;
-    /* Color azul oscuro */
-    --black: #333;
-    /* Color negro */
-    --white: white;
-    /* Color blanco */
-    --bg-dark: #4685cd;
-    /* Color de fondo azul oscuro */
-    --transition-time: 15s; /* Personaliza el tiempo de transición aquí */
-    --max-width: 600px; 
-}
+/*ImpoertGoogle Font - Exo2 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 /* Estilo de caja para todos los elementos */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
 }
 
 /* Configuración del tamaño de fuente base para todo el documento */
@@ -33,11 +16,12 @@ html {
     /* 1rem = 10px */
 }
 
-/* Configuración básica del cuerpo del documento */
 body {
-    margin: 0;
-    padding: 0;
-    font-size: var(--std);
+    background-image: url(/assets/images/fondo_cocina_L5.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Estilo para los enlaces */
@@ -74,7 +58,7 @@ a {
 
 .logo img {
     margin: 0.5rem;
-    height: 10rem;
+    height: 13rem;
     margin-right: 0.5rem;
 }
 
@@ -95,75 +79,40 @@ a {
     color: red;
 }
 
-header .header__icons__container {
-    width: 100%;
-    height: 10rem;
-    display: grid;
-    justify-content: flex-end;
-    background-color: white;
-}
-
-header .header__icons__container .icons {
-    width: 15rem;
-    height: center;
-    display: flex;
-    justify-items: flex-end;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 1.5rem;
-}
-
-header .icons span {
-    color: red;
-}
-
 .main {
     display: flex;
-    justify-content: center; /* Centra horizontalmente en el eje X */
-    align-items: center; /* Centra verticalmente en el eje Y */
+    justify-content: center;
+    /* Centra horizontalmente en el eje X */
+    align-items: center;
+    /* Centra verticalmente en el eje Y */
+}
+/* configuracion de slider */
+.carousel__container {
+   display: flex;
+   width: 70rem;
+   height: 30rem;
 }
 
-.slider-container {
-    position: relative;
-    max-width: var(--max-width);
-    overflow: hidden;
+.carousel__container img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
 }
 
-.slider {
-    display: flex;
-    animation: slide var(--transition-time) infinite;
+.carousel__container img:hover { 
+    transform: scale(1.1);
+    width: 50rem;
+    opacity: 1;
+    filter: contrast(120%)
 }
 
-.slider img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--dark);
-    color: var(--white);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.slider-btn:hover {
-    background-color: var(--bg-dark);
-}
-
-.prev-btn {
-    left: 20px;
-}
-
-.next-btn {
-    right: 20px;
-}
+@media (max-width: 768px) {
+    .carousel__container {
+      display: none; /* sconde slider en dispositivos móviles */
+    }
+  }
 
 .recetasvarias img {
     width: 55%;
@@ -177,101 +126,124 @@ header .icons span {
     margin: 0 auto;
 }
 
-.contenedor {
-    width: 100%;
-    margin: auto;
-}
-
 .recetario img {
     width: 100%;
     margin: 5px;
     padding: 10px 20px;
     border-radius: 2%;
-    }
+}
 
-.recetario .contenedor {
+.container__recetario {
+    width: 100%;
+    margin: auto;
+}
+
+.recetario .container__recetario {
     display: grid;
-    }
+}
 
 @media(min-width:520px) {
-        .recetario .contenedor {
-            grid-template-columns: repeat(2,50%);
-        }
-    }  
+    .recetario .container__recetario {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
 
 @media(min-width:780px) {
-    .recetario .contenedor {
-        grid-template-columns: repeat(3,33.3%);
+    .recetario .container__recetario {
+        grid-template-columns: repeat(3, 33.3%);
     }
 }
 
-/* Modifica la animación del slider */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    10% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-100%);
-    }
-    35% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(-200%);
-    }
-    60% {
-        transform: translateX(-200%);
-    }
-    75% {
-        transform: translateX(-300%);
-    }
-    85% {
-        transform: translateX(-300%);
-    }
-    100% {
-        transform: translateX(-400%);
-    }
-}
-
-
-footer {
+.nosotros {
+    background-color: rgba(214, 210, 210, 0.712);
+    height: 50%;
+    margin: 5%;
     display: flex;
-    justify-content: center; 
-    align-items: flex-end; 
-    margin: 10px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+    padding: 1rem;
 }
 
-.footer_copyright {
-    font-size: 1rem; /* Tamaño de fuente pequeño */
-    text-align: center; /* Centrar el texto horizontalmente en el footer */
-    color: #666; /* Color de texto gris, puedes personalizar el color */
-    margin: 2rem 0; /* Márgenes superior e inferior */
+.nosotros p {
+    height: 50%;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
 }
 
-/*Configuración del formulario de contacto*/ 
+.nosotros h1, a {
+    grid-column: auto;
+    font-size:large;
+    margin-bottom: 10px;
+}
 
-.grid-container{
+/*Configuración del formulario de contacto*/
+
+.grid-container {
     display: grid;
     grid-template-columns: repeat(1, auto);
     grid-gap: 10px;
     padding: 10px;
     justify-content: center;
+}
 
-  }
-  
-  .grid-container h1{
+.grid-container h1 {
     align-items: center;
     color: crimson;
-  }
-  
-  .grid-item{
+}
+
+.grid-item {
     grid-column: auto;
     margin-bottom: 10px;
-  }
+}
 
-  .grid-item label, input, textarea{
+.grid-item label,
+input,
+textarea {
     width: 100%;
-  }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .header__icons__container {
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    justify-content: center;
+}
+
+footer .header__icons__container .icons {
+    width: 15rem;
+    height: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1.5rem;
+}
+
+footer .icons span {
+    color: red;
+}
+
+.footer_copyright {
+    font-size: 1rem;
+    /* Tamaño de fuente pequeño */
+    text-align: center;
+    /* Centrar el texto horizontalmente en el footer */
+    color: #666;
+    /* Color de texto gris, puedes personalizar el color */
+    margin: .5rem 0;
+    /* Márgenes superior e inferior */
+}
