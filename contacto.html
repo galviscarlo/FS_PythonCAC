@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/font/flaticon.css" />
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <script src="./js/scripts.js"></script>
     <title> CONTACTO ListoEnCinco</title>
   </head>
   <body>
@@ -41,26 +42,25 @@
         
         <h1>Dejanos tu comentario</h1>
         
-        <form action="./index.html">
+        <form id="Formulario" method="post">
           <div class="grid-item">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Pedro">
+            <input type="text" id="nombre" name="nombre" placeholder="Pedro">
           </div>
           <div class="grid-item">
             <label for="nombre">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required placeholder="Perez">
+            <input type="text" id="apellido" name="apellido" placeholder="Perez">
           </div>
           <div class="grid-item">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="pedro.perez@tumail.com">
+            <input type="email" id="email" name="email" placeholder="pedro.perez@tumail.com">
           </div>
           <div class="grid-item">
             <label for="comentario">Comentario:</label>
             <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
           </div>
           <div class="grid-item">
-            <button type="submit">Enviar</button>
-          </div>
+            <button type="submit" value="Enviar" onclick="validarFormulario()">Enviar</button>            
         </form>
       </div>
       
