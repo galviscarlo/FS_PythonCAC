@@ -312,4 +312,7 @@ footer .icons span {
     .nav {
         display: none;
     }
+    .receta__api {
+        display: none;
+    }
 }
