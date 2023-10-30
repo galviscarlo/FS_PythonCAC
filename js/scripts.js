@@ -17,15 +17,6 @@ fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         document.querySelector("#Receta #Category").textContent = receta.meals[0].strCategory;
         document.querySelector("#Receta #Picture").src = receta.meals[0].strMealThumb;
 
-/* 
-console.log(receta.meals);                     
-console.log(receta.meals[0].strMeal);
-console.log(receta.meals[0].strCategory);
-console.log(receta.meals[0].strMealThumb);
-console.log(user.results[0].name.last);
-console.log(user.results[0].picture.thumbnail);
-
-*/
 }
 
 logRandomFru();
