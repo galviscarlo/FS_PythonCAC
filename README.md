@@ -31,6 +31,6 @@ incorporación de fuentes de Google.
 
 integrantes 
 
-Carlos Galvis
-Maria Roble
+Carlos Galvis / 
+Maria Roble  /
 Patricia Avendaño
