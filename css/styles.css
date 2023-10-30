@@ -269,19 +269,3 @@ footer .icons span {
     margin: .5rem 0;
     /* Márgenes superior e inferior */
 }
-
-@media(min-width:520px) {
-    .recetario .container__recetario {
-        grid-template-columns: repeat(2, 50%);
-    }
-}
-
-@media(min-width:780px) {
-    .recetario .container__recetario {
-        grid-template-columns: repeat(3, 33.3%);
-    }
-
-
-  
-}
-
