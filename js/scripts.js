@@ -11,7 +11,7 @@ fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
 
         const receta = await response.json();
-        console.log(receta);
+        console.log(Receta);
 
         document.querySelector("#Receta #Meal").textContent = receta.meals[0].strMeal;
         document.querySelector("#Receta #Category").textContent = receta.meals[0].strCategory;
