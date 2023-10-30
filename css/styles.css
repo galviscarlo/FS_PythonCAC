@@ -247,3 +247,33 @@ footer .icons span {
     margin: .5rem 0;
     /* Márgenes superior e inferior */
 }
+
+.recetas {
+    height: 50%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.recetas p {
+    height: 50%;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+}
+
+.recetas h1, a {
+    align-items: center;
+    color: crimson;
+}
+
+.recetas img {
+    width: 500px;
+    height: 300px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
