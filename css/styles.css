@@ -82,9 +82,8 @@ a {
 .main {
     display: flex;
     justify-content: center;
-    /* Centra horizontalmente en el eje X */
     align-items: center;
-    /* Centra verticalmente en el eje Y */
+    flex-direction: column;
 }
 /* configuracion de slider */
 .carousel__container {
@@ -108,10 +107,41 @@ a {
     filter: contrast(120%)
 }
 
-@media (max-width: 768px) {
-    .carousel__container {
-      display: none; /* sconde slider en dispositivos móviles */
-    }
+
+  .button-arrow--red {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: #ef233c
+  }
+  .button-arrow--red:hover {
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  .button-arrow--red:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  .button-arrow--red:after {
+    content: "\00BB";
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    line-height: 40px;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
   }
 
 .recetasvarias img {
@@ -142,18 +172,11 @@ a {
     display: grid;
 }
 
-@media(min-width:520px) {
-    .recetario .container__recetario {
-        grid-template-columns: repeat(2, 50%);
-    }
+.iframe__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-@media(min-width:780px) {
-    .recetario .container__recetario {
-        grid-template-columns: repeat(3, 33.3%);
-    }
-}
-
 .nosotros {
     background-color: rgba(214, 210, 210, 0.712);
     height: 50%;
@@ -206,7 +229,6 @@ textarea {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -247,3 +269,19 @@ footer .icons span {
     margin: .5rem 0;
     /* Márgenes superior e inferior */
 }
+
+@media(min-width:520px) {
+    .recetario .container__recetario {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media(min-width:780px) {
+    .recetario .container__recetario {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+
+  
+}
+
