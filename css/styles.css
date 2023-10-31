@@ -189,11 +189,15 @@ a {
 
 .receta__api {
     display: flex;
-    justify-content: center;
+    font-size: medium;
     align-items: center;
     flex-direction: column;
 }
 
+.receta__api > div{
+    width: 100%;
+    margin: 10%;
+}
 
 .nosotros {
     background-color: rgba(214, 210, 210, 0.712);

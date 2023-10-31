@@ -1,32 +1,21 @@
-//Uso de la API
- 
-fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-// Exito
-    .then(response => response.json())  // convertir a json
-    .then(json => console.log(json))    //imprimir los datos en la consola
-    .catch(err => console.log('Solicitud fallida: ', err)); // Capturar errores
+//Parametros de la API
 
-// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-    async function logRandomFru() {
-        const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+async function searchMeal() {
+  const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+  const receta = await response.json();
+  console.log(Receta);
 
-        const receta = await response.json();
-        console.log(Receta);
-
-        document.querySelector("#Receta #Meal").textContent = receta.meals[0].strMeal;
-        document.querySelector("#Receta #Category").textContent = receta.meals[0].strCategory;
-        document.querySelector("#Receta #Picture").src = receta.meals[0].strMealThumb;
+  document.querySelector("#Receta #Meal").textContent = receta.meals[0].strMeal;
+  document.querySelector("#Receta #Category").textContent = receta.meals[0].strCategory;
+  document.querySelector("#Receta #Origin").textContent = receta.meals[0].strArea;
+  document.querySelector("#Receta #Picture").src = receta.meals[0].strMealThumb;
+  document.querySelector("#Receta #Step").href = receta.meals[0].strSource;
 
 }
 
-logRandomFru();
+searchMeal();
 
 // Función que Valida el formulario
-
-/*document.getElementById('Formulario').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
-    validarFormulario();
-});*/
 
 function validarFormulario() {
   // Obtener los valores de los campos del formulario
