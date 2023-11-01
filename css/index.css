@@ -1,0 +1,263 @@
+/*ImpoertGoogle Font - Exo2 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/assets/images/fondo_cocina_L5.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-decoration: none;
+    display: inline;
+}
+
+header { 
+    width: 100%;
+    height: 80px;
+    background: rgb(248, 211, 3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin: 5px;
+    height: 100px;
+    margin-right: 5px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav_menu ul {
+    display: flex;
+}
+
+.nav_menu ul li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.nav_menu ul li a:hover {
+  color: black;
+  background: rgb(255, 255, 255);
+}
+
+.nav_menu ul li a.active {
+    color: black;
+    background: white;
+}
+
+.carousel__container {
+    display: flex;
+    width: 70rem;
+    height: 30rem;
+ }
+ 
+ .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ .carousel__container img {
+     width: 0px;
+     flex-grow: 1;
+     object-fit: cover;
+     opacity: .8;
+     transition: .5s ease;
+ }
+ 
+ .carousel__container img:hover { 
+     transform: scale(1.1);
+     width: 50rem;
+     opacity: 1;
+     filter: contrast(120%)
+ }
+ 
+ .flyer__container {
+    display: none;
+}
+
+ 
+   .button-arrow--red {
+     min-width: 130px;
+     height: 40px;
+     color: #fff;
+     padding: 5px 10px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     position: relative;
+     display: inline-block;
+     outline: none;
+     overflow: hidden;
+     border-radius: 5px;
+     border: none;
+     background-color: #ef233c
+   }
+   .button-arrow--red:hover {
+     border-radius: 5px;
+     padding-right: 24px;
+     padding-left:8px;
+   }
+   .button-arrow--red:hover:after {
+     opacity: 1;
+     right: 10px;
+   }
+   .button-arrow--red:after {
+     content: "\00BB";
+     position: absolute;
+     opacity: 0;
+     font-size: 20px;
+     line-height: 40px;
+     top: 0;
+     right: -20px;
+     transition: 0.4s;
+   }
+
+   footer {
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .header__icons__container {
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    justify-content: center;
+}
+
+footer .header__icons__container .icons {
+    width: 15rem;
+    height: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1.5rem;
+}
+
+footer .icons span {
+    color: red;
+}
+
+.footer_copyright {
+    font-size: 1rem;
+    /* Tamaño de fuente pequeño */
+    text-align: center;
+    /* Centrar el texto horizontalmente en el footer */
+    color: #666;
+    /* Color de texto gris, puedes personalizar el color */
+    margin: .5rem 0;
+    /* Márgenes superior e inferior */
+}
+
+@media only screen and (max-width: 1320px) {
+    header{
+        padding: 0 50px;
+    }
+    .flyer__container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header{
+        padding: 0 30px;      
+    }
+    .flyer__container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    
+    .logo h1 {
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+    }
+    .nav_menu {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #c7ba43;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .nav_menu.active {
+       height: 450px; 
+    }
+    .nav_menu ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+ 
+    .nav_menu.active ul {
+        opacity: 1;
+    }
+
+    .nav_menu ul li a { 
+        margin-bottom: 12px;
+        color: whitesmoke;
+    } 
+
+    .carousel__container {
+        display: none;
+    }
+
+    .flyer__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .flyer__container img {
+        max-width: 70%;
+    }
+}
