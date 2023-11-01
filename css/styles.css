@@ -34,89 +34,6 @@ a {
     /* Color de texto negro para enlaces */
 }
 
-/* Estilo para el encabezado (header) */
-.header {
-    display: flex;
-    max-width: 120rem;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0 2rem;
-    height: 10.7rem;
-    background: var(--white);
-}
-
-.header div,
-.header nav {
-    width: 100%;
-    height: 100%;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    margin: 0.5rem;
-    height: 13rem;
-    margin-right: 0.5rem;
-}
-
-.nav__menu {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
-}
-
-.nav__menu a {
-    font-size: 1.6rem;
-    padding: 0 1.7rem;
-    color: red;
-}
-
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-/* configuracion de slider */
-.carousel__container {
-   display: flex;
-   width: 70rem;
-   height: 30rem;
-}
-
-.carousel__container img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-}
-
-.carousel__container img:hover { 
-    transform: scale(1.1);
-    width: 50rem;
-    opacity: 1;
-    filter: contrast(120%)
-}
-
-.flyer__container {
-    overflow: hidden; 
-}
-
-.flyer__mobile {
-    max-width: 100%;
-    height: auto;
-}
-
-
   .button-arrow--red {
     min-width: 130px;
     height: 40px;
@@ -250,46 +167,6 @@ textarea {
     width: 100%;
 }
 
-footer {
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-}
-
-footer .header__icons__container {
-    width: 100%;
-    height: 10rem;
-    display: grid;
-    justify-content: center;
-}
-
-footer .header__icons__container .icons {
-    width: 15rem;
-    height: center;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 1.5rem;
-}
-
-footer .icons span {
-    color: red;
-}
-
-.footer_copyright {
-    font-size: 1rem;
-    /* Tamaño de fuente pequeño */
-    text-align: center;
-    /* Centrar el texto horizontalmente en el footer */
-    color: #666;
-    /* Color de texto gris, puedes personalizar el color */
-    margin: .5rem 0;
-    /* Márgenes superior e inferior */
 }
 
 @media(min-width:520px) {
@@ -307,15 +184,6 @@ footer .icons span {
     }
 }
 @media (max-width: 767px) {
-    .carousel__container {
-        display: none;
-    }
-    .flyer__mobile {
-        width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    }
-    .nav {
-        display: none;
-    }
     .receta__api {
         display: none;
     }
